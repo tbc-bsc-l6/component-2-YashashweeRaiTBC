@@ -1,1 +1,26 @@
+.border-bottom-brown{
+    border-bottom: 1px solid #73605B;
+}
 
+.border-top-brown{
+    border-bottom: 1px solid #73605B;
+}
+
+.background-brown{
+    background: #330000
+}
+
+.navbar a {
+    color: #330000 !important;  
+    font-weight: bold; 
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    color: #1a0000 !important;  
+}
+
+.navbar a {
+    transition: color 0.3s ease;
+}
