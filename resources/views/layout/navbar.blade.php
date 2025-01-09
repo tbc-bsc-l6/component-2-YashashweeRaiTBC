@@ -8,6 +8,6 @@
         </nav>
     </div>
     <div class="col-12 text-center g-0 border-bottom-brown border-top-browm background-brown">
-        <img style="max-height: 420px; max-width: 1250px;" src="/header.png" title="The main header">
+        <img class="header-image" src="/header.png" title="The main header">
     </div>
 </div>
