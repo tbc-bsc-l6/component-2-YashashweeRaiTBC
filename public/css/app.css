@@ -30,3 +30,9 @@
 .navbar a {
     transition: color 0.3s ease;
 }
+
+.header-image {
+    width: 100%; 
+    height: auto;
+    max-height: 420px;
+}
