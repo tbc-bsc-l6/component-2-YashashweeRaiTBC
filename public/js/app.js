@@ -24,5 +24,8 @@ __webpack_require__.r(__webpack_exports__);
 
 window.$ = window.jQuery = require("jquery");
 window.bootstrap = require("bootstrap");
+function redirectTo(url) {
+  window.location.href = url;
+}
 /******/ })()
 ;
