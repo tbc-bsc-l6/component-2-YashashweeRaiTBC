@@ -11,9 +11,9 @@
                         <div class="col-12 mx-auto">
                             <small class="text-muted fs-8">{{ $blog['date'] }}</small>
                             <br>
-                            @foreach(explode(",", $blog['tags']) as $tag)
-                                <span class="fs-6 pe-1 text-brown">{{$tag}}</span>
-                                @if($loop->iteration < count(explode(",", $blog['tags'])))
+                            @foreach($blog['tags'] as $tag)
+                                <span class="fs-6 pe-1 text-brown">{{ $tag['tag'] }}</span>
+                                @if($loop->iteration < count($blog['tags']))
                                     <span class="fs-6 pe-1 text-brown">&#x2022;</span>
                                 @endif
                             @endforeach
