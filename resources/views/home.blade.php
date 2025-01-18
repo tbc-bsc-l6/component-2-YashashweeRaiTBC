@@ -33,27 +33,27 @@
                 <div class="col-12 g-0 mt-2">
                     <nav>
                         <ul class="pagination justify-content-center">
-                            <li class="page-item @if($page_number === 1) disabled @endif">
-                                <a class="page-link" href="/?page={{ $page_number - 1 }}">
-                                    Previous
-                                </a>
+                            <!-- Previous Button -->
+                            <li class="page-item @if($page_number <= 1) disabled @endif">
+                                <a class="page-link" href="/?page={{ $page_number - 1 }}"> Previous </a>
                             </li>
-
-                            @for($i = 0; $i < ceil($total_blogs / $page_length); $i++)
-                                <li class="page-item @if($page_number === $i + 1) active @endif">
-                                    <a class="page-link" href="/?page{{ $i + 1 }}">{{ $i + 1 }}</a>
+                            
+                            <!-- Page Numbers -->
+                            @for ($i = 1; $i <= ceil($total_blogs / $page_length); $i++)
+                                <li class="page-item @if($page_number === $i) active @endif">
+                                    <a class="page-link" href="/?page={{ $i }}">{{ $i }}</a>
                                 </li>
                             @endfor
-
-                            <li class="page-item @if($page_number >= ceil($total_blogs / $page_length) disabled @endif">
-                                <a class="page-link" href="/?page={{ $page_number + 1 }}">
-                                    Next
-                                </a>
+                            
+                            <!-- Next Button -->
+                            <li class="page-item @if($page_number >= ceil($total_blogs / $page_length)) disabled @endif">
+                                <a class="page-link" href="/?page={{ $page_number + 1 }}"> Next </a>
                             </li>
                         </ul>
                     </nav>
                 </div>
             </div>
+
 
         </div>
 
@@ -63,6 +63,7 @@
             function redirectTo(url) {
             window.location.href = url;
         }
-</script>
+        </script>
+        
     </body>
 </html>
