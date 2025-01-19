@@ -13,7 +13,7 @@ return new class extends Migration
     {
         DB::table("users")
             ->insert([
-                "email"=>"yashashwee.rai@gmail.com",
+                "email"=>"admin@mail.com",
                 "name"=>"Yashashwee Rai",
                 "password"=>bcrypt("password")
             ]);
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        DB::table("users")->where("email","=","yashashwee.rai@gmail.com")->delete(); 
+        DB::table("users")->where("email","=","admin@mail.com")->delete(); 
     }
 };
