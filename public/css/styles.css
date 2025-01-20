@@ -1,0 +1,150 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.container {
+    margin-top: 2rem;
+}
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer-link {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.container {
+    margin-top: 2rem;
+}
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.footer-link {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+/* Ensure pagination is on a single line */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Pagination container */
+.pagination {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+/* Pagination item styles */
+.pagination li {
+    margin: 0 5px;
+}
+
+/* Pagination links */
+.pagination .page-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px; /* Reduce padding to make arrows and buttons smaller */
+    font-size: 0.875rem; /* Slightly smaller font size */
+    border-radius: 4px;
+}
+
+/* Pagination arrows */
+.pagination .page-item .page-link {
+    padding: 5px 8px; /* Less padding for arrows */
+    font-size: 0.875rem; /* Smaller font size */
+}
+
+/* Remove excess padding on the SVG icons inside the arrows */
+.pagination .page-item .page-link svg {
+    width: 16px; /* Smaller arrow icon size */
+    height: 16px; /* Smaller arrow icon size */
+}
+
+/* Hover effect */
+.pagination .page-link:hover {
+    background-color: #f1f1f1;
+    color: #007bff;
+}
+
+/* Active pagination item */
+.pagination .page-item.active .page-link {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Disabled pagination */
+.pagination .page-item.disabled .page-link {
+    color: #ccc;
+    cursor: not-allowed;
+}
