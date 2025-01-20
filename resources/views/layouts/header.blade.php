@@ -13,9 +13,32 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('groceries.index') }}">Grocery List</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('groceries.create') }}">Add Item</a>
-                    </li>
+
+                    <!-- Add Item link only visible to Admin -->
+                    @auth
+                        @if(auth()->user()->role === 'admin')
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('groceries.create') }}">Add Item</a>
+                            </li>
+                        @endif
+                    @endauth
+
+                    <!-- Authentication Links -->
+                    @guest
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}">Register</a>
+                        </li>
+                    @else
+                        <li class="nav-item">
+                            <form action="{{ route('logout') }}" method="POST">
+                                @csrf
+                                <button type="submit" class="nav-link btn btn-link">Logout</button>
+                            </form>
+                        </li>
+                    @endguest
                 </ul>
             </div>
         </div>
