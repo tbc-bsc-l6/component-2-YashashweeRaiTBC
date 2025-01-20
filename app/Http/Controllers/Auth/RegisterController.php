@@ -16,24 +16,22 @@ class RegisterController extends Controller
         return view('auth.register');
     }
 
-    protected function redirectTo()
-    {
-        return route('groceries.index'); // Redirect to groceries index after registration
-    }
-
     // Handle user registration
     public function register(Request $request)
     {
+        // Validate input
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|confirmed|min:8',
         ]);
 
+        // If validation fails, redirect back with errors
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
         }
 
+        // Create a new user
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -41,8 +39,10 @@ class RegisterController extends Controller
             'role' => 'user', // Default role
         ]);
 
+        // Log the user in
         auth()->login($user);
 
-        return redirect()->route('groceries');
+        // Redirect to groceries.index after successful registration
+        return redirect()->route('groceries.index');
     }
 }
